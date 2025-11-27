@@ -1,0 +1,49 @@
+.users-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.users-content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  width: 100%;
+}
+
+.users-page-scroll {
+  max-height: 75vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.users-page-scroll::-webkit-scrollbar {
+  width: 16px;
+}
+
+.users-page-scroll::-webkit-scrollbar-track {
+  background: #D4D0C8;
+  border: 1px solid #DFDFDF;
+}
+
+.users-page-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #FFFFFF 0%, #D4D0C8 100%);
+  border: 2px solid;
+  border-color: #FFFFFF #404040 #404040 #FFFFFF;
+}
+
+.users-page-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to right, #FEFEFE 0%, #E0DED6 100%);
+}
+
+@media (max-width: 968px) {
+  .users-content {
+    max-width: 100%;
+    padding: 15px;
+    margin: 20px auto;
+  }
+  
+  .users-page-scroll {
+    max-height: 70vh;
+  }
+}

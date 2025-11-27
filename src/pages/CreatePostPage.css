@@ -1,0 +1,20 @@
+.create-post-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-post-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  width: 100%;
+}
+
+@media (max-width: 968px) {
+  .create-post-container {
+    max-width: 100%;
+    padding: 15px;
+    margin: 20px auto;
+  }
+}

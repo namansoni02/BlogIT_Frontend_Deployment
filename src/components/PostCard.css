@@ -1,0 +1,55 @@
+.post-card {
+  margin-bottom: 15px;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-author-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.post-author-link {
+  text-decoration: none;
+  color: var(--xp-blue);
+  font-weight: bold;
+}
+
+.post-author-link:hover {
+  text-decoration: underline;
+}
+
+.post-time {
+  color: #666;
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.post-title {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: var(--xp-window-blue);
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.delete-btn {
+  padding: 2px 8px;
+  font-size: 10px;
+  min-width: 30px;
+}
+
+.post-footer span {
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.post-footer span:hover {
+  background: rgba(0, 0, 0, 0.05);
+}

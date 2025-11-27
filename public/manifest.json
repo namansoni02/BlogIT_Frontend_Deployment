@@ -1,0 +1,9 @@
+{
+  "short_name": "BlogIT",
+  "name": "BlogIT - Share your feelings",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0055E5",
+  "background_color": "#5a92cf"
+}

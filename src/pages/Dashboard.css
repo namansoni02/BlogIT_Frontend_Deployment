@@ -1,0 +1,201 @@
+.dashboard-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-content-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 100%;
+  margin: 0;
+  align-items: start;
+}
+
+.dashboard-content-home {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 100%;
+  margin: 0;
+  align-items: start;
+  grid-auto-rows: max-content;
+}
+
+.dashboard-content-single {
+  padding: 20px;
+  max-width: 100%;
+  margin: 0;
+}
+
+.news-feed-column-full {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.news-feed-column,
+.users-column {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.news-feed-column .xp-window,
+.users-column .xp-window {
+  height: 100%;
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+/* Make columns equal height */
+.dashboard-content-two-col > * {
+  min-height: 100%;
+}
+
+/* News Feed fixed height */
+.news-feed-scroll {
+  height: 65vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Users List - balanced height */
+.users-list-scroll {
+  height: 55vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* News Feed for Home - Wider scrollable area */
+.news-feed-home-scroll {
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Users List for Home */
+.users-home-scroll {
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for Windows XP theme */
+.news-feed-scroll::-webkit-scrollbar,
+.users-list-scroll::-webkit-scrollbar,
+.news-feed-home-scroll::-webkit-scrollbar,
+.users-home-scroll::-webkit-scrollbar {
+  width: 16px;
+}
+
+.news-feed-scroll::-webkit-scrollbar-track,
+.users-list-scroll::-webkit-scrollbar-track,
+.news-feed-home-scroll::-webkit-scrollbar-track,
+.users-home-scroll::-webkit-scrollbar-track {
+  background: #D4D0C8;
+  border: 1px solid #DFDFDF;
+}
+
+.news-feed-scroll::-webkit-scrollbar-thumb,
+.users-list-scroll::-webkit-scrollbar-thumb,
+.news-feed-home-scroll::-webkit-scrollbar-thumb,
+.users-home-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #FFFFFF 0%, #D4D0C8 100%);
+  border: 2px solid;
+  border-color: #FFFFFF #404040 #404040 #FFFFFF;
+}
+
+.news-feed-scroll::-webkit-scrollbar-thumb:hover,
+.users-list-scroll::-webkit-scrollbar-thumb:hover,
+.news-feed-home-scroll::-webkit-scrollbar-thumb:hover,
+.users-home-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to right, #FEFEFE 0%, #E0DED6 100%);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1400px) {
+  .news-feed-scroll {
+    height: 55vh;
+  }
+  
+  .users-list-scroll {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 1200px) {
+  .dashboard-content-two-col {
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .news-feed-scroll {
+    height: 50vh;
+  }
+  
+  .users-list-scroll {
+    height: 45vh;
+  }
+}
+
+@media (max-width: 968px) {
+  .dashboard-content-two-col {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .news-feed-scroll {
+    height: auto;
+    max-height: 60vh;
+  }
+  
+  .users-list-scroll {
+    height: auto;
+    max-height: 40vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-content-two-col {
+    padding: 10px;
+  }
+  
+  .news-feed-scroll {
+    height: auto;
+    max-height: 50vh;
+  }
+  
+  .users-list-scroll {
+    height: auto;
+    max-height: 35vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-content-two-col {
+    padding: 5px;
+    gap: 15px;
+  }
+  
+  .news-feed-scroll {
+    height: auto;
+    max-height: 45vh;
+  }
+  
+  .users-list-scroll {
+    height: auto;
+    max-height: 30vh;
+  }
+}
